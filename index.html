@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Point of Sale</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>  
+
+    <div class="container">
+        <div class="menu-container">
+            <div class="menu-title">Menu</div>
+            <div class="menu-items">
+                <div class="item-container">
+                    <div>
+                        <img src="images/shoyu.jpg" alt="Shoyu Ramen" style="width: 100%;">
+                        <h4><b>Shoyu Ramen</b><br><b>320  PHP</b></h4>
+                    </div>
+                    <input type="number" id="shoyu ramen-quantity" placeholder="Enter how many">
+                    <br>
+                    <button onclick="addToOrder('shoyu ramen', 320 , 'shoyu ramen-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/shio (1).jpg" alt="Shio Ramen" style="width: 100%;">
+                        <h4><b>Shio Ramen</b><br><b>350  PHP</b></h4>
+                    </div>
+                    <input type="number" id="shio ramen-quantity">
+                    <br>
+                    <button onclick="addToOrder('shio ramen', 350 , 'shio ramen-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/seafood ramen (1).png" alt="Seafood Ramen" style="width: 100%;">
+                        <h4><b>Seafood Ramen</b><br><b>420  PHP</b></h4>
+                    </div>
+                    <input type="number" id="seafood ramen-quantity">
+                    <br>
+                    <button onclick="addToOrder('seafood ramen', 420, 'seafood ramen-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/gyudon (1).jpg" alt="Gyudon" style="width: 100%;">
+                        <h4><b>Gyudon</b><br><b>380 PHP</b></h4>
+                    </div>
+                    <input type="number" id="gyudon-quantity">
+                    <br>
+                    <button onclick="addToOrder('gyudon', 380, 'gyudon-quantity')">Add to order</button>
+                </div>
+                <br>
+                <div class="item-container">
+                    <div>
+                        <img src="images/katsudon (1).jpg" alt="Katsudon" style="width: 100%;">
+                        <h4><b>Katsudon</b><br><b>370 PHP</b></h4>
+                    </div>
+                    <input type="number" id="katsudon-quantity">
+                    <br>
+                    <button onclick="addToOrder('katsudon', 370, 'katsudon-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/unadon (1).jpg" alt="Unadon" style="width: 100%;">
+                        <h4><b>Unadon</b><br><b>390 PHP</b></h4>
+                    </div>
+                    <input type="number" id="unadon-quantity">
+                    <br>
+                    <button onclick="addToOrder('unadon', 390 , 'unadon-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/ramune (1).jpeg" alt="Ramune" style="width: 100%;">
+                        <h4><b>Ramune</b><br><b>90  PHP</b></h4>
+                    </div>
+                    <input type="number" id="ramune-quantity">
+                    <br>
+                    <button onclick="addToOrder('ramune', 90 , 'ramune-quantity')">Add to order</button>
+                </div>
+                <div class="item-container">
+                    <div>
+                        <img src="images/calpis (1).jpg" alt="Calpis" style="width: 100%;">
+                        <h4><b>Calpis</b><br><b>110  PHP</b></h4>
+                    </div>
+                    <input type="number" id="calpis-quantity">
+                    <br>
+                    <button onclick="addToOrder('calpis', 110 , 'calpis-quantity')">Add to order</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="ordered-items-container">
+            <div class="ordered-items-title">Ordered Items</div>
+            <div class="ordered-item-container" id="order-details">
+                <!-- Cards will be added here dynamically -->
+            </div>
+            <div class="total-container">
+                <div>
+                    <b>Total:</b> <span id="total"></span><br>
+                    <input type="number" id="customer-cash" placeholder="Enter cash amount here"><br>
+                    <button onclick="calculateChange()">Pay!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
